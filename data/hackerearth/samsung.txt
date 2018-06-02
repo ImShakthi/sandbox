@@ -1,0 +1,96 @@
+Tree-Stock Market
+
+Mr X is very curious to know about the frequency of stocks. But unfortunately for him, the stocks are represented as nodes of a tree with prices of the stocks as their value. Mr X hates trees as much as he loves to learn about stocks. So he asks for your help:
+
+ Given a tree with N nodes (each node represents a stock) numbered from 1 to N (rooted at 1). Each stock has a price/value which is denoted by Pi. He is very curious so he asks a lot of questions of the form: U L R . For each of his question he wants to know how many different stock prices/values are present in the subtree of U for which frequency is between L and R(Both inclusive).
+
+Constraints :
+
+1<=N,Q,U<=105
+
+1<=L<=R<=105
+
+1<=Pi<=105
+
+INPUT:
+
+The first line contains 2 space seperated integers N and Q, the number of nodes in the tree and the number of queries
+
+Following N-1 lines contains 2 integers a and b denoting an edge between a and b
+
+Next line contains N space seperated integers denoting the value of each node
+
+Following Q lines contains 3 space seperated integers U,L,R
+
+OUTPUT:
+
+Output Q lines containing the answer of each query.
+
+Hint :
+
+Sack DSU on tree
+Sample Input
+
+6 3
+1 2
+1 3
+2 4
+2 5
+5 6
+2 1 2 1 1 2
+2 2 2
+1 2 3
+3 1 4
+
+Sample Output
+
+0
+2
+1
+
+
+Explanation
+
+0 (1 has frequency 3 and 2 has frequency 1 in the subtree of 2)
+
+2 (1 has freq 3 and 2 has freq 3)
+
+1 (1 has freq 0 and 2 has freq 1)
+
+
+*********************************************************************************************************************
+
+Zero Xor
+
+A Zero Xor Subset is a non-empty subset having Xor of all the elements in it equal to 0.
+Now you are given an array of N numbers.
+You have to count the number of different Zero Xor Subsets of this array.
+
+Input:
+First line contains a number N
+N is the length of the array.
+Second line contains the N elements of the array.
+
+Output:
+Single number denoting the Count of Zero Xor Subsets of the given array.
+
+Input Constraints:
+1<=N<=40
+1<=a[i]<=1018
+
+Hint:
+
+Meet in the middle
+Sample Input
+
+3
+1 2 3
+
+Sample Output
+
+1
+
+Explanation
+
+For [1, 2, 3] ,there is only 1 subset (1, 2, 3) having Xor (1 ^ 2 ^3) = 0.
+So, the answer is 1.
