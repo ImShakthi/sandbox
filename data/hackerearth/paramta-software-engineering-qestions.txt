@@ -1,0 +1,119 @@
+ function func(a, b) { 
+        arguments[1] = 2; 
+        alert(b); 
+    } 
+    func(1);
+    
+    
+    
+    In JavaScript, what is the significance of the extensible attribute?
+
+    It modifies the properties of an object to make it non-configurable.
+    It "locks down” objects into a known state to prevent tampering from outside.
+    It configures and returns a writable property.
+    All of these
+    
+    
+    
+    Swaps
+
+You are given an array of N
+numbers and a number K. Find the minimum number of swaps required to bring all the numbers greater than or equal to K
+
+together.
+
+Swap here means, swapping value of array[i]
+and array[j], where 1≤i,j≤N
+
+Input Format:
+
+First line contains an integer N
+, denoting the number of elements in the array.
+Second line contains N
+
+space-separated integers, denoting the elements of array.
+
+Output Format:
+Print the minimum number of swaps required.
+
+Constraints:
+
+1≤N≤105
+
+1≤array[i]≤105
+1≤K≤105
+
+Sample Input
+
+5 3
+5 2 1 3 4
+
+Sample Output
+
+1
+
+Explanation
+
+We need to bring 5,3 and 4 together. So swap 5 and 1.
+Note: Your code should be able to convert the sample input into the sample output. However, this is not enou
+gh to pass the challenge, because the code will be run on multiple test cases. Therefore, your code must solve this problem statement.
+
+
+
+
+
+
+
+Treasure island
+
+Monk wants to divide an island which is in the form of N
+* M matrix into pieces of 1∗1
+
+matrices.He can do the splitting of the island by making a horizontal cut or a vertical cut. In each case the island gets divided into 2 pieces. There are certain coins in each cell. The cost of split is the sum of all the cells in the island which is to be split.
+
+Monk wants to split the island in minimum cost.Help Monk do so.
+
+InputFormat
+
+First line contains 2
+integers N and M
+
+.
+
+Then N
+lines follow each containing M
+
+integers.
+
+OutputFormat
+
+Print the minimum cost required.
+
+Constraints
+
+1≤N,M≤50
+
+1≤coins≤105
+
+Sample Input
+
+2 2
+
+2 2
+
+1 3
+
+Sample Output
+
+16
+
+Explanation
+
+First we split the matrix with cost 8 and get 2 matrices as (2,2) and (1,3).
+
+Now we can split (2,2) with cost 4 into (2) and (2).
+
+Now we can split (1,3) with cost 4 into (1) and (3).
+Note: Your code should be able to convert the sample input into the sample output. However, this is not enough to pass the challenge, because the code will be run on multiple test cases. Therefore, your code must solve this problem statement.
+
+

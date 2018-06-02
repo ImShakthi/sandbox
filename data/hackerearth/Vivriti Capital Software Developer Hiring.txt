@@ -1,0 +1,148 @@
+1) Partial Digit Sequence
+
+You are given an array A of length N. The partial digit subsequence of an array A is a subsequence of integers in which each consecutive integers have at least 1 digit in common. You are required to find the length of longest partial digit subsequence from the given array.
+
+Input : 
+
+    The first line of input contains N, length of array A.
+    The second line of input contains N space-separated integers representing elements of A.
+
+Output :
+
+    Print an integer representing the maximum length of the longest partial digit subsequence of the given array A.
+
+Constraints :
+1 <= N<= 10 pow(15)
+1 <= A[i] <= 10 pow(18)
+   
+Sample Input
+
+2
+12 23
+
+Sample Output
+
+2
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+2) Tedious Work
+
+John has a very long and tedious project in his current semester, in which he has to write n documents, numbered from 1 to n. The ith document takes A(i) amount of time to complete. He needs to complete the document in the order of their numbers and he cannot skip any document. In other words, he has to complete 1st document, then 2nd, then 3rd and so on.
+
+He doesn't like to write documents, so he decided to copy documents from the internet. It takes him C(i) amount of time to look for the ith document online. If he searches for the ith document, then search result gives him next k documents starting from the ith document. He can copy these documents to complete the project. After getting k documents (starting from ith document) he can directly jump to (i+j)th document where 1 ≤ j ≤ k-1 by copying all the documents from index i to (i+j-1) from the search result. It is not necessary for John to copy all k documents. As John hates to write these documents, he wants to spend minimum time doing this project. Help him to determine the minimum time it takes to complete the project. Copy-paste does not take any time.
+
+Input Format
+
+In the first line, you are given two integers, n (number of documents) and k (maximum continuous documents that John can copy).
+
+In the second line, you are given an array A with n integers, A(i), where 1 ≤ i ≤ n, represents the time to write the ith document.
+
+In the third line, you are given an array C with n integers, C(i), where 1 ≤ i ≤ n, represents the time it takes to look for ith document online.
+
+Constraints
+
+1 ≤ n ≤ 1000
+
+1 ≤ k ≤ n
+
+1 ≤ A(i) ≤ 105
+
+1 ≤ C(i) ≤ 105
+
+Output Format
+
+Print the single Integer, which is the minimum required time to complete the project.
+Sample Input
+
+7 3
+
+2 1 9 7 8 4 3
+
+5 1 6 1 6 1 5
+
+Sample Output
+
+5
+
+Explanation
+
+    He looks for the 2nd, 4th and 6th document online to get answer 5.
+    
+    [current index = 1] He writes the document ==> cost = 2
+    [current index = 2] He looks online ==> cost = 2 + 1 [He gets the copy of all the documents between 2nd and 4th document (including both 2nd and 4th),but he copies only 2nd and 3rd, and moves to index = 4]
+    [current index = 4] He looks online ==> cost = 3 + 1 [same as above and move to index 6]
+    [current index = 6] He looks online ==> cost = 4 + 1 = 5 [same as above and copies all the remaining document]
+    
+    So minimum cost = 5
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Vowel Query
+
+You are given a string S consisting of lowercase alphabets and an integer array val consisting of N integers. Using the given string S and array val, you need to create another string X according to the code snippet below:
+
+
+Initially string X is empty
+Let len be the length of string S
+
+for i := 0 to N-1
+    pos := absolute value of val[i]
+    if(val[i] >= 0)
+      X := X + S[0,pos] // append substring of string S from index 0 to pos (both including) into X
+    else
+      X := X + S[pos,len-1] // append substring of string S from index pos to len-1 (both including) into X
+
+You have to answer Q tasks. For each task, you are given an integer K and you have to print the Kth vowel in the string X. If the Kth vowel doesn't exist print -1.
+
+Note: The vowels are a, e, i, o, and u.
+
+Input Format:
+
+The first line contains a string S.
+
+The second line contains an integer N.
+
+The third line contains N space-separated integers, denoting the element of the array val.
+
+The fourth line contains an integer Q, denoting the number of tasks.
+
+The fifth line contains Q space-separated integers, denoting the tasks.
+
+Output Format:
+
+Print the answer for each of the Q tasks in a newline.
+
+Constraints:
+
+All the characters of string S are lowercase characters only.
+Sample Input
+
+aeiou
+
+3
+
+-3 -2 1
+
+5
+
+1 3 5 7 10
+
+Sample Output
+
+o
+
+i
+
+u
+
+e
+
+-1
+
+Explanation
+
+The String Obtained X="ouiouae"
+
+ 
