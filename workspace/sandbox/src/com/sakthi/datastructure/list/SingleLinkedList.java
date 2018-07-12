@@ -161,6 +161,23 @@ class SingleLinkedList {
 		return null;
 	}
 
+	public Integer findNthEnd(final int position) {
+		SingleNode temp = null, node = head;
+		int cont = 0;
+		for (temp = head; temp != null;) {
+			cont++;
+			if (position - cont > 0) {
+				node = node.getNext();
+			}
+			temp = temp.getNext();
+		}
+		if (position <= cont) {
+			System.out.println(node.getData());
+			return node.getData();
+		}
+		return null;
+	}
+
 	public Integer findAtN(final int position) {
 		Integer nodeData = null;
 		try {

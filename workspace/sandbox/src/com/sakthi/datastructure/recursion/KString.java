@@ -7,9 +7,10 @@ public class KString
 	{
 		// TODO Auto-generated method stub
 		KString kString = new KString();
-		String str = "abc";
-		char[] chars = str.toCharArray();
-		kString.generate(chars.length, str.toCharArray(), chars);
+		System.out.println(1/0);
+//		String str = "abc";
+//		char[] chars = str.toCharArray();
+//		kString.generate(chars.length, str.toCharArray(), chars);
 	}
 	
 	private void generate(final int n, final char[] chars, final char[] ch)

@@ -8,7 +8,7 @@ public class SingleLinkedListHandler {
 		// TODO Auto-generated method stub
 		SingleLinkedListHandler singleLinkedList = new SingleLinkedListHandler();
 		SingleLinkedList list = singleLinkedList.init();
-		System.out.println(list.findAtN(9));
+		System.out.println(list.findNthEnd(5));
 	}
 
 	
@@ -19,7 +19,7 @@ public class SingleLinkedListHandler {
 		try {
 			scanner = new Scanner(System.in);
 			list = new SingleLinkedList();
-			System.out.println(list.toString());
+//			System.out.println(list.toString());
 			list.add(10);
 			list.add(11);
 			list.add(12);
