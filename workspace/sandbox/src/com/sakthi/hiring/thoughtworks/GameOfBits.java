@@ -1,3 +1,5 @@
+package com.sakthi.hiring.thoughtworks;
+
 import java.util.Scanner;
 
 public class GameOfBits {
@@ -22,14 +24,13 @@ public class GameOfBits {
 				// Final no after toggling bits
 				finalNo = gameOfBits.getFinalNo(binaryArr);
 
-				System.out.println("finalNo=" + finalNo);
 				boolean won = gameOfBits.isWinningNo(no, finalNo);
 
 				int winnerIndex = 0;
 				if (won) {
-					winnerIndex = (binaryArr.length + 1) % noOfPlayer;
-				} else {
 					winnerIndex = binaryArr.length % noOfPlayer;
+				} else {
+					winnerIndex = (binaryArr.length + 1) % noOfPlayer;
 				}
 				System.out.println(Player.values()[winnerIndex]);
 
@@ -55,7 +56,7 @@ public class GameOfBits {
 	 */
 	private boolean isWinningNo(final int n, final int res) {
 		boolean isWinningNo = false;
-		if ((res >= (n - 1)) || ((n + 1) <= res)) {
+		if ((res >= (n - 1)) && ((n + 1) <= res)) {
 			isWinningNo = true;
 		}
 		return isWinningNo;
@@ -93,7 +94,6 @@ public class GameOfBits {
 			if (((temp_index) < binaryArr.length) && (binaryArr[temp_index] == currentBit)) {
 				binaryArr[temp_index] = toggle(binaryArr[temp_index]);
 			}
-			System.out.println(binaryArr);
 		}
 		return Integer.parseInt(String.valueOf(binaryArr), 2);
 	}
