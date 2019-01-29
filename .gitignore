@@ -1,2 +1,4 @@
 workspace/sandbox/bin/*
 /bin/
+.idea/
+sandbox.iml
